@@ -1,7 +1,6 @@
 const path = require('path');
 const Song = require('../models/song');
 
-
 // Create a song
 exports.createSong = async (req, res) => {
     const { title, artist, genre, releaseDate } = req.body;

@@ -11,10 +11,11 @@ exports.createArtist = async (req, res) => {
             bio,
             birthDate
         });
+        console.log(req.body);
         await artist.save();
         res.status(201).json(artist);
     } catch (err) {
-        console.log(err);
+        console.log("error creating artist:",err);
         res.status(500).json({ message: err.message });
     }
 };
